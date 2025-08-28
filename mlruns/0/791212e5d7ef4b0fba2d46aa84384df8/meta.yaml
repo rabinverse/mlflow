@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/791212e5d7ef4b0fba2d46aa84384df8/artifacts
+end_time: 1756400473207
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 791212e5d7ef4b0fba2d46aa84384df8
+run_name: nimble-bee-616
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756400473192
+status: 3
+tags: []
+user_id: rabinpoudel
