@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/rabinpoudel/Documents/code_code_Code/ds_ML/mlflow_dvc/mlflow/mlruns/544648661284702282/4f32bcf6c3a040be992f5a19fc098895/artifacts
+end_time: 1756406684836
+entry_point_name: ''
+experiment_id: '544648661284702282'
+lifecycle_stage: active
+run_id: 4f32bcf6c3a040be992f5a19fc098895
+run_name: capable-grouse-628
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756406682905
+status: 3
+tags: []
+user_id: rabinpoudel

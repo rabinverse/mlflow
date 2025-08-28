@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/rabinpoudel/Documents/code_code_Code/ds_ML/mlflow_dvc/mlflow/mlruns/544648661284702282/e56b794032664efdaa52fbafdf42466b/artifacts
+end_time: 1756405452252
+entry_point_name: ''
+experiment_id: '544648661284702282'
+lifecycle_stage: active
+run_id: e56b794032664efdaa52fbafdf42466b
+run_name: abundant-dove-8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756405450504
+status: 3
+tags: []
+user_id: rabinpoudel

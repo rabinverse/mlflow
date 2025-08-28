@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/rabinpoudel/Documents/code_code_Code/ds_ML/mlflow_dvc/mlflow/mlruns/544648661284702282/5329716451534e8bbea74667cb784963/artifacts
+end_time: 1756406387900
+entry_point_name: ''
+experiment_id: '544648661284702282'
+lifecycle_stage: active
+run_id: 5329716451534e8bbea74667cb784963
+run_name: likeable-roo-430
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756406386310
+status: 3
+tags: []
+user_id: rabinpoudel

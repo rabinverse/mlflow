@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/rabinpoudel/Documents/code_code_Code/ds_ML/mlflow_dvc/mlflow/mlruns/544648661284702282/caf7cc2613ff46e58ce8e6538f42c637/artifacts
+end_time: 1756404368883
+entry_point_name: ''
+experiment_id: '544648661284702282'
+lifecycle_stage: active
+run_id: caf7cc2613ff46e58ce8e6538f42c637
+run_name: languid-doe-654
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756404368601
+status: 3
+tags: []
+user_id: rabinpoudel

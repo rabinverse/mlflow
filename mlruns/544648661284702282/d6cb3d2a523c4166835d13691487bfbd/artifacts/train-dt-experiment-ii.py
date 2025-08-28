@@ -63,7 +63,7 @@ print("f1_score : ", f1_score(y_test, y_pred))
 # )  # - (new experiment name) if present it creates runs in that experiment if experiment doesnt exists  it will creat one
 # or  with mlflow.start_run(experiment_id=the experiment id):
 # deckare run name to avoid default random names run_name="name"
-# mlflow.set_tracking_uri("http://127.0.0.1:5000/")
+mlflow.set_tracking_uri("http://127.0.0.1:5000/")
 
 mlflow.set_experiment("dt-Diabetes_classification")
 
@@ -75,10 +75,11 @@ with mlflow.start_run():
 
     mlflow.log_param("max_depth", max_depth)
 
-    mlflow.sklearn.log_model(sk_model=dt, artifact_path="DecisionTree") # type: ignore
-    mlflow.set_tag("author", "tester")
-    mlflow.set_tag("model", "decision tree")
-    mlflow.set_tag("state", "almost final")
+    mlflow.sklearn.log_model(
+        sk_model=dt,
+        name="DecisionTreeClassifier",
+        registered_model_name="Diabetes_DT_Model",
+    )
 
     # artifacts
     #  confusion matrix

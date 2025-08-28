@@ -75,10 +75,12 @@ with mlflow.start_run():
 
     mlflow.log_param("max_depth", max_depth)
 
-    mlflow.sklearn.log_model(sk_model=dt, artifact_path="DecisionTree") # type: ignore
-    mlflow.set_tag("author", "tester")
-    mlflow.set_tag("model", "decision tree")
-    mlflow.set_tag("state", "almost final")
+    mlflow.sklearn.log_model(
+        sk_model=dt, artifact_path="DecisionTree"
+    )
+    mlflow.set_tag("author","tester")
+    mlflow.set_tag("model","decision tree")
+    mlflow.set_tag("state","almost final")
 
     # artifacts
     #  confusion matrix

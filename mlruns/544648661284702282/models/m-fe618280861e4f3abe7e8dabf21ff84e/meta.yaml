@@ -1,0 +1,10 @@
+artifact_location: file:///Users/rabinpoudel/Documents/code_code_Code/ds_ML/mlflow_dvc/mlflow/mlruns/544648661284702282/models/m-fe618280861e4f3abe7e8dabf21ff84e/artifacts
+creation_timestamp: 1756406386327
+experiment_id: '544648661284702282'
+last_updated_timestamp: 1756406387750
+model_id: m-fe618280861e4f3abe7e8dabf21ff84e
+model_type: null
+name: DecisionTree
+source_run_id: 5329716451534e8bbea74667cb784963
+status: 2
+status_message: null

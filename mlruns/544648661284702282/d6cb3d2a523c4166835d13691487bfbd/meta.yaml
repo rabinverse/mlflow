@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/rabinpoudel/Documents/code_code_Code/ds_ML/mlflow_dvc/mlflow/mlruns/544648661284702282/d6cb3d2a523c4166835d13691487bfbd/artifacts
+end_time: 1756405970739
+entry_point_name: ''
+experiment_id: '544648661284702282'
+lifecycle_stage: active
+run_id: d6cb3d2a523c4166835d13691487bfbd
+run_name: bittersweet-stag-847
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756405969009
+status: 3
+tags: []
+user_id: rabinpoudel

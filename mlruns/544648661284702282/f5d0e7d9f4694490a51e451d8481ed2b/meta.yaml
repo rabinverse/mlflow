@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/rabinpoudel/Documents/code_code_Code/ds_ML/mlflow_dvc/mlflow/mlruns/544648661284702282/f5d0e7d9f4694490a51e451d8481ed2b/artifacts
+end_time: 1756404796949
+entry_point_name: ''
+experiment_id: '544648661284702282'
+lifecycle_stage: active
+run_id: f5d0e7d9f4694490a51e451d8481ed2b
+run_name: debonair-hen-182
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756404795106
+status: 3
+tags: []
+user_id: rabinpoudel

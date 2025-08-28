@@ -1,0 +1,37 @@
+artifact_path: file:///Users/rabinpoudel/Documents/code_code_Code/ds_ML/mlflow_dvc/mlflow/mlruns/544648661284702282/models/m-f97573a29d0942aebcc9c2e8ff6bbf41/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.13
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.1
+is_signature_from_type_hint: false
+mlflow_version: 3.3.2
+model_id: m-f97573a29d0942aebcc9c2e8ff6bbf41
+model_size_bytes: 591249
+model_uuid: m-f97573a29d0942aebcc9c2e8ff6bbf41
+prompts: null
+run_id: e56b794032664efdaa52fbafdf42466b
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "gender", "required": true}, {"type": "double",
+    "name": "age", "required": true}, {"type": "long", "name": "hypertension", "required":
+    true}, {"type": "long", "name": "heart_disease", "required": true}, {"type": "double",
+    "name": "bmi", "required": true}, {"type": "double", "name": "HbA1c_level", "required":
+    true}, {"type": "long", "name": "blood_glucose_level", "required": true}]'
+  outputs: '[{"type": "long", "required": true}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-08-28 18:24:10.561773'

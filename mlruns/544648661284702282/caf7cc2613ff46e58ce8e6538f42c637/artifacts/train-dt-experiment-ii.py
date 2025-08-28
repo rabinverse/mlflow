@@ -4,15 +4,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.metrics import (
-    accuracy_score,
-    f1_score,
-    precision_score,
-    recall_score,
-    confusion_matrix,
-)
+from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score,confusion_matrix
 import mlflow
-import mlflow.sklearn
 
 
 data = pd.read_csv("./data/raw/diabetes.csv")
@@ -40,9 +33,9 @@ max_depth = 60
 
 
 # model
-dt = DecisionTreeClassifier(max_depth=max_depth)
-dt.fit(x_train, y_train)
-y_pred = dt.predict(x_test)
+rf = DecisionTreeClassifier(max_depth=max_depth)
+rf.fit(x_train, y_train)
+y_pred = rf.predict(x_test)
 
 # accuracy=accuracy_score(y_test, y_pred)
 # precision=precision_score(y_test, y_pred)
@@ -63,7 +56,7 @@ print("f1_score : ", f1_score(y_test, y_pred))
 # )  # - (new experiment name) if present it creates runs in that experiment if experiment doesnt exists  it will creat one
 # or  with mlflow.start_run(experiment_id=the experiment id):
 # deckare run name to avoid default random names run_name="name"
-# mlflow.set_tracking_uri("http://127.0.0.1:5000/")
+mlflow.set_tracking_uri("http://127.0.0.1:5000/") 
 
 mlflow.set_experiment("dt-Diabetes_classification")
 
@@ -75,24 +68,18 @@ with mlflow.start_run():
 
     mlflow.log_param("max_depth", max_depth)
 
-    mlflow.sklearn.log_model(sk_model=dt, artifact_path="DecisionTree") # type: ignore
-    mlflow.set_tag("author", "tester")
-    mlflow.set_tag("model", "decision tree")
-    mlflow.set_tag("state", "almost final")
-
-    # artifacts
-    #  confusion matrix
+    #  confusion matrix 
     cm = confusion_matrix(y_test, y_pred)
-    plt.figure(figsize=(6, 6))
-    sns.heatmap(cm, annot=True, fmt="d", cmap="Blues")
-    plt.ylabel("Actual")
-    plt.xlabel("Predicted")
-    plt.title("Confusion Matrix")
+    plt.figure(figsize=(6,6))
+    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues')
+    plt. ylabel('Actual')
+    plt. xlabel( 'Predicted')
+    plt. title( 'Confusion Matrix')
     # Save the plot as an artifact
     plt.savefig("./data/confusion_matrix.png")
-    mlflow.log_artifact("./data/confusion_matrix.png")
+    mlflow.log_artifact ("./data/confusion_matrix.png")
     mlflow.log_artifact(__file__)
 
 
-# mlflow also saves code  as artifact
+#mlflow also saves code  as artifact 
 # mlflow.log_artifact(__file__)

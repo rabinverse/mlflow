@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/rabinpoudel/Documents/code_code_Code/ds_ML/mlflow_dvc/mlflow/mlruns/544648661284702282/516019f175554f9f9c60ec3ccbeda16c/artifacts
+end_time: 1756406077998
+entry_point_name: ''
+experiment_id: '544648661284702282'
+lifecycle_stage: active
+run_id: 516019f175554f9f9c60ec3ccbeda16c
+run_name: bold-bear-802
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756406076250
+status: 3
+tags: []
+user_id: rabinpoudel
