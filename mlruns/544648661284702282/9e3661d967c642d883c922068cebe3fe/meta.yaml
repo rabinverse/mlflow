@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/rabinpoudel/Documents/code_code_Code/ds_ML/mlflow_dvc/mlflow/mlruns/544648661284702282/9e3661d967c642d883c922068cebe3fe/artifacts
+end_time: 1756401857341
+entry_point_name: ''
+experiment_id: '544648661284702282'
+lifecycle_stage: active
+run_id: 9e3661d967c642d883c922068cebe3fe
+run_name: dt-50
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756401857325
+status: 3
+tags: []
+user_id: rabinpoudel
