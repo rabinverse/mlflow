@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/rabinpoudel/Documents/code_code_Code/ds_ML/mlflow_dvc/mlflow/mlruns/544648661284702282/fe34a6e1f0dd4860b527ec68d6cf905f/artifacts
+end_time: 1756402929067
+entry_point_name: ''
+experiment_id: '544648661284702282'
+lifecycle_stage: active
+run_id: fe34a6e1f0dd4860b527ec68d6cf905f
+run_name: amazing-mule-444
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756402927979
+status: 3
+tags: []
+user_id: rabinpoudel

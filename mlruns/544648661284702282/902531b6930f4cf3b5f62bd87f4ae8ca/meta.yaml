@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/rabinpoudel/Documents/code_code_Code/ds_ML/mlflow_dvc/mlflow/mlruns/544648661284702282/902531b6930f4cf3b5f62bd87f4ae8ca/artifacts
+end_time: 1756403919585
+entry_point_name: ''
+experiment_id: '544648661284702282'
+lifecycle_stage: active
+run_id: 902531b6930f4cf3b5f62bd87f4ae8ca
+run_name: handsome-lynx-911
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756403919344
+status: 3
+tags: []
+user_id: rabinpoudel
