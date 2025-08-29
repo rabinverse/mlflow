@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import OneHotEncoder
 from sklearn.metrics import (
     accuracy_score,
     f1_score,
@@ -17,21 +19,39 @@ import dagshub
 
 data = pd.read_csv("./data/raw/diabetes.csv")
 
-# ---------> filter
+# ---------> preprocess
 
 
 data["gender"] = data["gender"].map({"Female": 0, "Male": 1})
-data.drop(columns="smoking_history", inplace=True)
+
 data["gender"] = data["gender"].fillna(data["gender"].mode()[0])
+transformer = ColumnTransformer(
+    transformers=[("cat-ohe", OneHotEncoder(drop="first"), ["smoking_history"])],
+    remainder="passthrough",
+)
 
 # ---------------->
 
 X = data.drop(columns="diabetes")
 y = data["diabetes"]
-
 x_train, x_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42
 )
+
+# Fit transformer on x_train only
+Xtrain = transformer.fit_transform(x_train)
+X_train_transformed = pd.DataFrame(
+    Xtrain,  # type: ignore
+    columns=transformer.get_feature_names_out(),
+    index=x_train.index,
+)
+
+# Transform x_test (no fitting)
+X_test_transformed = pd.DataFrame(
+    transformer.transform(x_test),  # type: ignore
+    columns=transformer.get_feature_names_out(),
+    index=x_test.index,
+)  #
 
 
 max_depth = 15
@@ -40,8 +60,8 @@ n_estimators = 100
 
 # model
 rf = RandomForestClassifier(max_depth=max_depth, n_estimators=n_estimators)
-rf.fit(x_train, y_train)
-y_pred = rf.predict(x_test)
+rf.fit(X_train_transformed, y_train)
+y_pred = rf.predict(X_test_transformed)
 
 # accuracy=accuracy_score(y_test, y_pred)
 # precision=precision_score(y_test, y_pred)
