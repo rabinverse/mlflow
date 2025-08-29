@@ -4,5 +4,5 @@
 
 ```
 mlflowremote/          --out dir contains mlflow exp for remote
-└── mlflowlocal/
+└── mlflow-run-local/  
 ```
