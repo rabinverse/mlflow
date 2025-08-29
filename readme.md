@@ -3,6 +3,6 @@
 [experiments](https://dagshub.com/rabin20-04/mlflow.mlflow)
 
 ```
-mlflowremote/
+mlflowremote/          --out dir contains mlflow exp for remote
 └── mlflowlocal/
 ```
