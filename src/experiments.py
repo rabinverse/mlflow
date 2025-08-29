@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.model_selection import train_test_split
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import (
     accuracy_score,
     f1_score,
@@ -34,13 +34,14 @@ x_train, x_test, y_train, y_test = train_test_split(
 )
 
 
-max_depth = 30
+max_depth = 15
+n_estimators = 100
 
 
 # model
-dt = DecisionTreeClassifier(max_depth=max_depth)
-dt.fit(x_train, y_train)
-y_pred = dt.predict(x_test)
+rf = RandomForestClassifier(max_depth=max_depth, n_estimators=n_estimators)
+rf.fit(x_train, y_train)
+y_pred = rf.predict(x_test)
 
 # accuracy=accuracy_score(y_test, y_pred)
 # precision=precision_score(y_test, y_pred)
@@ -57,17 +58,17 @@ print("f1_score : ", f1_score(y_test, y_pred))
 # with mlflow.start_run(): without setexperimet or experiment id they are  stored in the default experiment runs
 
 # mlflow.set_experiment(
-#     "dt-Diabetes_classification"
+#     "rf-Diabetes_classification"
 # )  # - (new experiment name) if present it creates runs in that experiment if experiment doesnt exists  it will creat one
 # or  with mlflow.start_run(experiment_id=the experiment id):
 # deckare run name to avoid default random names run_name="name"
 # mlflow.set_tracking_uri("http://127.0.0.1:5000/") for local
 
 mlflow.set_tracking_uri("https://dagshub.com/rabin20-04/mlflow.mlflow")
-dagshub.init(repo_owner="rabin20-04", repo_name="mlflow", mlflow=True) # type: ignore
+dagshub.init(repo_owner="rabin20-04", repo_name="mlflow", mlflow=True)  # type: ignore
 
 
-mlflow.set_experiment("dt-Diabetes_classification")
+mlflow.set_experiment("rf-Diabetes_classification")
 
 
 with mlflow.start_run():
@@ -77,8 +78,9 @@ with mlflow.start_run():
     mlflow.log_metric("f1_score : ", float(f1_score(y_test, y_pred)))
 
     mlflow.log_param("max_depth", max_depth)
+    mlflow.log_param("n-estimators", n_estimators)
 
-    mlflow.sklearn.log_model(sk_model=dt, artifact_path="DecisionTree")
+    mlflow.sklearn.log_model(sk_model=rf, artifact_path="Random forest")
     mlflow.set_tag("author", "tester")
     mlflow.set_tag("model", "decision tree")
     mlflow.set_tag("state", "almost final")
